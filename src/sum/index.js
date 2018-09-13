@@ -10,7 +10,12 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  /* your logic here...*/
+  if(isNaN(a) === true || isNaN(b) === true)
+      throw new Error('This function accept only numbers!!!');
+    else if(typeof a === 'string' || typeof b === 'string')
+        throw new Error('This function accepts only numbers!!!');
+    else
+        return a + b;  
 };
 
 export default sum;
